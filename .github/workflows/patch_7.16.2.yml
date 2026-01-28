@@ -45,6 +45,7 @@ jobs:
         BUILD_TIME=1732601340
         echo Latest Version: $LATEST_VERSION
         echo Build Time: $BUILD_TIME
+        echo "has_new_version=true" >> $GITHUB_OUTPUT
         curl -s -o CHANGELOG https://upgrade.mikrotik.com/routeros/$LATEST_VERSION/CHANGELOG
         cat CHANGELOG
         echo "NEWEST=${NEWEST}" >> $GITHUB_ENV
